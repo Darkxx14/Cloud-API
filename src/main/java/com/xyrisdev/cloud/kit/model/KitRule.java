@@ -19,7 +19,7 @@ public enum KitRule {
 	SUMO; // If enabled
 
 	public static boolean enabled(KitRule rule, String kit) {
-		return CloudDuels.getInstance().getKitManager().isRuleEnabled(kit, rule).join();
+		return CloudDuels.getInstance().getKitManager().isRuleEnabled(kit, rule);
 	}
 
 	public static @Nullable KitRule fromString(@NotNull String rule) {

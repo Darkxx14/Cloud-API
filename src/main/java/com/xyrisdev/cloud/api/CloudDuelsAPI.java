@@ -4,6 +4,7 @@ import com.xyrisdev.cloud.api.handler.arena.ArenaAPI;
 import com.xyrisdev.cloud.api.handler.arena.ArenaLoaderAPI;
 import com.xyrisdev.cloud.api.handler.duel.DuelAPI;
 import com.xyrisdev.cloud.api.handler.duel.queue.QueueAPI;
+import com.xyrisdev.cloud.api.handler.duel.request.RequestAPI;
 import com.xyrisdev.cloud.api.handler.event.EventManagerAPI;
 import com.xyrisdev.cloud.api.handler.kit.KitAPI;
 import com.xyrisdev.cloud.api.handler.lobby.LobbyAPI;
@@ -62,6 +63,9 @@ public interface CloudDuelsAPI {
 
 	@NotNull
 	QueueAPI queue();
+
+	@NotNull
+	RequestAPI request();
 
 	@NotNull
 	EventManagerAPI eventManager();

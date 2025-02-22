@@ -19,6 +19,8 @@ public interface DuelAPI {
 
 	void leave(@NotNull Player player);
 
+	void forceClose();
+
 	boolean inDuel(@NotNull Player player);
 
 	void remove(@NotNull Player player);

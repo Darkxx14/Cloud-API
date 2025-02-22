@@ -1,7 +1,7 @@
 package com.xyrisdev.cloud.api.handler.kit;
 
 import com.xyrisdev.cloud.kit.model.KitRule;
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.Material;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,27 +12,25 @@ public interface KitAPI {
 
 	void setKitRule(String kitName, KitRule rule, boolean enabled);
 
-	CompletableFuture<Boolean> isRuleEnabled(String kitName, KitRule rule);
+	boolean isRuleEnabled(String kitName, KitRule rule);
 
-	CompletableFuture<Void> setDisplayItem(String kitName, ItemStack item);
+	void setDisplayItem(String kitName, Material material);
 
-	CompletableFuture<ItemStack> getDisplayItem(String kitName);
+	Optional<Material> getDisplayItem(final String kitName);
 
-	CompletableFuture<Boolean> isKitEnabled(String kitName);
+	boolean isKitEnabled(String kitName);
 
 	void setKitEnabled(String kitName, boolean enabled);
 
 	List<String> getKits();
 
-	CompletableFuture<List<String>> getEnabledKits();
-
-	CompletableFuture<Optional<String>> getScoreboardLine(String kitName, int lineIndex);
+	List<String> getEnabledKits();
 
 	CompletableFuture<Void> setScoreboardTitle(String kitName, String title);
 
-	CompletableFuture<String> getScoreboardTitle(String kitName);
+	String getScoreboardTitle(String kitName);
 
 	CompletableFuture<Void> setScoreboardLines(String kitName, List<String> lines);
 
-	CompletableFuture<List<String>> getScoreboardLines(String kitName);
+	List<String> getScoreboardLines(String kitName);
 }

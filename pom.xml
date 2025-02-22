@@ -63,6 +63,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -75,13 +79,19 @@
         <dependency>
             <groupId>com.xyrisdev</groupId>
             <artifactId>cloud-duels</artifactId>
-            <version>1.0.0-R1</version>
+            <version>1.0.0-R2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.34</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Mqzn</groupId>
+            <artifactId>mBoard</artifactId>
+            <version>1.6</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
